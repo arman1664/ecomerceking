@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5a14ddec25.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            padding:0px;
+            list-style: none;
+            margin: 0px;
+        }
+
+        nav{
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        nav img{
+            width: 18vw;
+            margin: .5vw;
+        }
+
+        nav a{
+            color: black;
+            text-decoration: none;
+            margin: 1.5vw;
+            cursor: pointer;
+            padding: 0vw 2vw;
+            font-size: 1.5vw;
+        }
+
+
+        .body1{
+            background-image: url(images/slider-bg.jpg);
+            /* background-position: center; */
+            background-attachment: fixed;       
+            background-size: 100%;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+
+        .heading{
+            padding:  10vw 8vw;
+            width: 50%;
+            /* border: 2px red solid; */
+            /* text-align: center; */
+        }
+
+        #sale1{
+            color: brown;
+            font-size: 4.5vw;
+        }
+
+        #sale2{
+            color: rgb(8, 23, 13);
+            font-size: 6vw;
+        }
+
+        #head-para{
+            /* text-align: left; */
+            font-size: 1.5vw;
+            margin: 3vw 0vw;
+        }
+
+        #shop-btn{
+            background-color: rgb(245, 46, 46);
+            color: whitesmoke;
+            padding: .5vw 2vw;
+            font-size: 2vw;
+            cursor: pointer;
+            border: 1.5px  rgb(245, 46, 46) solid;
+        }
+
+        #shop-btn:hover{
+            background-color:  rgba(255, 255, 255, 0);
+            color:  rgb(245, 46, 46);
+        }
+
+        #active{
+            color: red;
+        }
+
+        #shop-with-us{
+            text-align: center;
+            color: darkslategray;
+            font-size: 5vw;
+            margin: 1vw;
+        }
+
+        .underline{
+            background-color: rgb(245, 46, 46);
+            padding: .2vw;
+            margin: auto;
+            width: 5%;
+        }
+
+
+        .services{
+            text-align: center;
+            display: flex;
+            margin: 2vw 0vw;
+        }
+
+        .delevery{
+            background-color: darkslategrey;
+            margin: 1vw auto;
+            width: 25vw;
+            color: whitesmoke;
+            align-items: center;
+        }
+
+        i{
+            font-size: 5vw;
+            margin: 2.5vw;
+
+        }
+        #delevery-heading{
+            margin: 1vw auto;
+            font-size: 2.5vw;
+        }
+
+        #delevery-para{
+            margin: 2vw;
+            font-size: 1.2vw;
+
+        }
+
+        .new-arrivals{
+            background-image: url(images/arrival-bg.jpg);
+            background-position: left;
+            background-size: 100%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+        }
+
+        .arrivals-content{
+            padding: 10vw 5vw;
+            float: right;
+            margin: 8vw auto;
+            width: 45%;
+        }
+        #arrivals-heading{
+            font-size: 7vw;
+        }
+
+        #arrivals-para{
+            font-size: 1vw;
+            padding: 2vw 0vw;
+        }
+
+        .underline2{
+            background-color: rgb(245, 46, 46);
+            padding: .1vw;
+            margin: auto;
+            text-align: center;
+            width: 15%;
+        }
+
+        span{
+            color: rgb(245, 46, 46);
+        }
+
+        .our-products{
+            display: flex;
+            width: 90vw;
+            margin: auto;
+        }
+
+        .products-items {
+            width: 40vw;
+            text-align: center;
+            /* border: 2px red solid; */
+            box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.322);
+            margin: 3vw 2vw;
+        }
+
+        .products-items img{
+            max-width: 30vw;
+            max-height: 20vw;
+            margin: 2vw;
+        }
+
+        .allproduct{
+            text-align: center
+        }
+        #all-products{
+            background-color: rgb(245, 46, 46);
+            color: whitesmoke;
+            margin: auto;
+            padding: .3vw 2vw;
+            font-size: 1.5vw;
+            cursor: pointer;
+            border: 1.5px  rgb(245, 46, 46) solid;
+        }
+        #all-products:hover{
+            background-color:  rgba(255, 255, 255, 0);
+            color:  rgb(245, 46, 46);
+        }
+
+        .suscribe-body{
+            background-image: url(images/suscribe.png);
+            margin: 10vw 10vw;
+            padding: 5vw;
+            text-align: center;
+            box-shadow: 25px 25px 35px rgba(128, 128, 128, 0.766);
+        }
+
+        .suscribe-containeer{
+            /* border: 2px red solid; */
+            padding: 1vw;
+            /* width: 80%;
+            margin: auto; */
+        }
+
+        #suscribe-heading{
+            font-size: 3vw;
+            color:rgb(24, 41, 41);
+            margin: 1vw;
+        }
+
+        #email{
+            margin: 1vw;
+            width: 30vw;
+            padding: .5vw;
+            border-radius: 10px;
+            border: 0px;
+        }
+        input::placeholder{
+            color: rgba(165, 42, 42, 0.616);
+            font-size: 1.5vw;
+            text-align: center;
+        }
+
+        #suscribe-para{
+            font-size: 1.5vw;
+        }
+
+        #suscribe-btn{
+            background-color: rgb(245, 46, 46);
+            color: whitesmoke;
+            margin: 2vw auto;
+            padding: .3vw 4vw;
+            font-size: 1.5vw;
+            cursor: pointer;
+            border-radius: 50px;
+            border: 1.5px  rgb(245, 46, 46) solid;
+        }
+
+        #suscribe-btn:hover{
+            background-color:  rgba(255, 255, 255, 0);
+            color:  rgb(245, 46, 46);
+        }
+
+        .coustomer-pic{
+            margin: 5vw 2vw;
+            margin-bottom: 1vw;
+            text-align: center;
+        }
+
+        .coustomer-pic img{
+            border-radius: 100px;
+            width: 15vw;
+        }
+
+        footer{
+            background-color: rgba(210, 208, 208, 0.31);
+            margin: 3vw 1.5vw;
+            border: .3px black solid;
+        }
+
+        .foot-containeer{
+            /* border: 2px purple solid; */
+            display: flex;
+            width: 90vw;
+            margin: auto;
+        }
+
+        .foot-box{
+            /* border: 2px red dotted; */
+            width: 25vw;
+        }
+
+        .foot-box img{
+            width: 12vw;
+            margin: 1vw;
+        }
+
+        .foot-box li a{
+            color: rgba(0, 0, 0, 0.534);
+            font-size: 1.3vw;
+            text-decoration: none;
+        }
+
+        h4{
+            margin: 1vw;
+            font-size: 2vw;
+
+        }
+        .foot-box li{
+            margin: .5vw;
+        }
+
+        #address-details{
+            font-size: 1.3vw;
+            margin: 1vw;
+        }
+
+        #address{
+            font-weight: bold;
+            color: rgb(6, 6, 6);
+        }
+
+        #HELP{
+            background-color: rgb(245, 46, 46);
+            color: whitesmoke;
+            margin: auto 2vw;
+            font-size: 1.5vw;
+            text-align: center;
+            cursor: pointer;
+            width: 15vw;
+            height: 3vw;
+            background: red;
+            transition-property: width, height;
+            transition-duration: 1s;
+            border: 1.5px  rgb(245, 46, 46) solid;
+        }
+
+        #HELP:hover{
+            width: 16vw;
+            height: 4vw;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="menu">
+            <li>
+                <a id="active" href="">Home</a>
+                <a href="">Home</a>
+                <a href="">Home</a>
+                <a href="">Home</a>
+        </div>
+    </nav>
+
+    <div class="body1">
+
+        <div class="heading">
+            <p id="sale1">Sale 20% off</p>
+            <p id="sale2">on everything</p>
+            <p id="head-para">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quo voluptates officia omnis iure minima aut voluptatum iusto nisi facilis!
+            </p>
+
+            <button id="shop-btn">Shop Now</button>
+        </div>
+        
+    </div>
+
+    <p id="shop-with-us">Shop-with-us</p>
+    <div class="underline"></div>
+
+    <div class="services">
+        <div class="delevery"><i class="fa-solid fa-truck-fast"></i>
+        <p id="delevery-heading">Free Delevery</p>
+        <p id="delevery-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam!</p>
+        </div>
+        <div class="delevery"><i class="fa-solid fa-rotate-left"></i>
+        <p id="delevery-heading">Easy Return</p>
+        <p id="delevery-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam!</p>
+        </div>
+        <div class="delevery"><i class="fa-solid fa-star-half-stroke"></i>
+        <p id="delevery-heading">Quality Products</p>
+        <p id="delevery-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam!</p>
+        </div>
+    </div>
+
+
+    <div class="new-arrivals">
+
+        <div class="arrivals-content">
+            <p id="arrivals-heading">#New-Arrivals</p>
+            <p id="arrivals-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel saepe dicta minima alias esse? Exercitationem accusantium asperiores inventore animi libero nostrum alias eveniet optio sunt, quos delectus soluta ratione at illo deleniti? Dolore delectus doloremque rerum ad, cum molestiae adipisci ab? Delectus fugiat voluptatum illum rerum asperiores aperiam? Libero, expedita.</p>
+            <button id="shop-btn">Shop Now</button>
+        </div>
+
+    </div>
+
+    <p id="shop-with-us">Our- <span>Products</span></p>
+    <div class="underline2"></div>
+
+
+    <div class="our-products">
+        <div class="products-items">
+            <img src="images/p1.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p2.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p3.png" alt="">
+        </div>
+    </div>
+
+    <div class="our-products">
+        <div class="products-items">
+            <img src="images/p4.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p5.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p6.png" alt="">
+        </div>
+    </div>
+
+    <div class="our-products">
+        <div class="products-items">
+            <img src="images/p7.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p8.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p9.png" alt="">
+        </div>
+    </div>
+
+    <div class="our-products">
+        <div class="products-items">
+            <img src="images/p10.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p11.png" alt="">
+        </div>
+        <div class="products-items">
+            <img src="images/p12.png" alt="">
+        </div>
+    </div>
+
+    <div class="allproduct">
+        <button id="all-products">View All Products</button>
+    </div>
+
+
+    <div class="suscribe-body">
+        <div class="suscribe-containeer">
+            <p id="suscribe-heading">Subscribe To Get Discount Offers
+            </p>
+            <p id="suscribe-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <input type="email" name="" id="email" placeholder="Enter your email">
+            <br>
+            <button id="suscribe-btn">Suscribe</button>
+        </div>
+    </div>
+
+
+    <p id="shop-with-us">Customer's Testimonial</p>
+    <div class="underline"></div>
+
+    <div class="coustomer-pic">
+        <img src="images/client.jpg" alt="">
+        <p id="delevery-heading">Anna Trevor</p>
+        <p id="delevery-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, aliquam!</p>
+    </div>
+
+
+    <footer>
+        <div class="foot-containeer">
+            <div class="foot-box">
+                <img src="images/logo.png" alt="">
+                <p id="address-details"><span id="address">ADDRESS</span>: &nbsp; 28 White tower, Street Name New York City, USA</p>
+                <p id="address-details"><span id="address">TELEPHONE</span>: &nbsp; 
+                    <br>
+                    <br> +91 620 094 7002</p>
+                <p id="address-details"><span id="address">EMAIL</span>: &nbsp;
+                    <br><br> hussainmdarman172@gmail.com</p>
+            </div>
+
+
+            <div class="foot-box">
+                <h4>MENU</h4>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Services</a>
+                </li>
+                <li>
+                    <a href="">Testimonial</a>
+                </li>
+            </div>
+
+            <div class="foot-box">
+                <h4>ACCOUNT</h4>
+                <li>
+                    <a href="">Accoun</a>
+                </li>
+                <li>
+                    <a href="">Checkout</a>
+                </li>
+                <li>
+                    <a href="">Login</a>
+                </li>
+                <li>
+                    <a href="">Register</a>
+                </li>
+            </div>
+
+            <div class="foot-box">
+                <h4>NEWS LETTERS</h4>
+                <p id="delevery-para">Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                <button id="HELP">Help</button>
+            </div>
+
+
+
+        </div>
+        
+        
+
+    </footer>
+
+
+</body>
+</html>
